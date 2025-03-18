@@ -1,0 +1,150 @@
+/* Make navbar items appear on top when hovering */
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+  display: block; /* Ensure dropdown appears */
+  position: absolute; /* Position relative to the parent */
+  /* Position above the button */
+  left: 0; /* Align the left edge of the dropdown */
+  z-index: 1050; /* Ensure dropdown is above other elements */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+}
+
+/* Remove the dropdown arrow */
+.nav-item .dropdown-toggle::after {
+  display: none;
+}
+
+/* Style the dropdown menu */
+.dropdown-menu {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+}
+
+/* Dropdown item hover effect */
+.dropdown-item:hover {
+  background-color: #b2b2b2; /* Ash color on hover */
+  color: #fff;
+}
+
+.te {
+  padding-right: 110px;
+  padding-left: 110px;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.one {
+  background-color: rgb(239, 33, 33);
+  padding-left: 50px;
+}
+
+/* .Body {
+  padding-right: 0px;
+  float: right;
+  display: block;
+  overflow: hidden;
+}
+
+.a {
+  float: right;
+  display: block;
+  overflow: hidden;
+  padding-right: 20px;
+  padding-top: 8px;
+  list-style-type: none;
+} */
+
+.four {
+  background-color: rgb(170, 186, 199);
+  display: block;
+}
+
+.nav-item {
+  padding-right: 60px;
+  padding-left: 60px;
+}
+
+/* Navigation menu styling */
+.zero {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #942828;
+  padding: 5px 35px;
+  text-decoration: none;
+}
+
+/* Body section styling */
+.Body {
+  float: right;
+  display: flex; /* Use flex to align elements in a row */
+  align-items: center; /* Vertically align elements */
+}
+
+/* Individual links inside Body (cart, wishlist, login button) */
+.Body a {
+  margin-right: 20px; /* Space between icons and login button */
+  color: white; /* Default color for the links */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.login-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #942828;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border-color: #942828;
+  color: white;
+  text-decoration: none;
+  margin-top: 2px;
+}
+
+.login-btn:hover {
+  background-color: #618ebe;
+  color: white;
+}
+
+/* Profile Dropdown Button */
+.profile-btn {
+  background-color: #ff6600;
+  border: none;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 20px;
+  color: white;
+  transition: 0.3s;
+}
+
+.profile-btn:hover {
+  background-color: #e65c00;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-item:hover {
+  background-color: #ffcc00;
+  color: white;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+

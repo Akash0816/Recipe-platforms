@@ -1,0 +1,80 @@
+/* Custom Navbar Styling */
+.custom-navbar {
+  background-color: #a15151; /* Warm food-themed red */
+  padding: 10px 20px;
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Navigation Icons */
+.nav-icon {
+  font-size: 24px;
+  color: white;
+  margin-right: 15px;
+  transition: 0.3s;
+}
+
+.nav-icon:hover {
+  color: #ffcc00; /* Warm yellow hover */
+}
+
+/* Login Button */
+.login-btn {
+  display: flex;
+  align-items: center;
+  background-color: #ff6600; /* Food orange */
+  border-radius: 20px;
+  padding: 5px 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #e65c00;
+}
+
+/* Profile Dropdown Button */
+.profile-btn {
+  background-color: #ff6600;
+  border: none;
+  border-radius: 110%;
+  padding: 3px 10px;
+  font-size: 22px;
+  color: white;
+  transition: 0.3s;
+  font-weight: bold;
+  
+}
+
+.profile-btn:hover {
+  background-color: #e65c00;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-item:hover {
+  background-color: #ffcc00;
+  color: white;
+}
+
+.bi-house {
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.bi-person-circle {
+  padding-right: 2px;
+}
+
