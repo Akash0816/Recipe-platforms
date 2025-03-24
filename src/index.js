@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./Style/login.css";
 import "font-awesome/css/font-awesome.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import RouterComponent from "./router";
 
 import reportWebVitals from "./reportWebVitals";
 import { RouterProvider } from "react-router-dom";
@@ -15,7 +15,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <RouterProvider router={router} />
+      {/* <RouterProvider router={router} /> */}
+      <RouterComponent />
     </Provider>
   </React.StrictMode>
 );
