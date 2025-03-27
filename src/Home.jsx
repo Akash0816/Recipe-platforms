@@ -25,9 +25,12 @@ function Home() {
 
       try {
         // Fetch user profile
-        const profileResponse = await fetch("https://recipe-server-1-68ju.onrender.com/profile", {
-          headers: { Authorization: `Bearer ${token}` },
-        });
+        const profileResponse = await fetch(
+          "https://recipe-server-c7oz.onrender.com/profile",
+          {
+            headers: { Authorization: `Bearer ${token}` },
+          }
+        );
         const profileData = await profileResponse.json();
         console.log(profileData);
         if (profileResponse.ok) {

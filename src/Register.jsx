@@ -26,7 +26,7 @@ function Register() {
 
     try {
       const response = await axios.post(
-        "https://recipe-server-1-68ju.onrender.com/signup",
+        "https://recipe-server-c7oz.onrender.com/signup",
         {
           name,
           email,
