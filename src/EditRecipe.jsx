@@ -183,7 +183,7 @@ function RecipeEdit() {
             <img
               src={
                 recipe.imageUrl
-                  ? `http://localhost:8000${recipe.imageUrl}`
+                  ? `https://recipe-server-c7oz.onrender.com${recipe.imageUrl}`
                   : buger
               }
               alt="Recipe"

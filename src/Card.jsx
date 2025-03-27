@@ -1,4 +1,4 @@
-import React  from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import buger from "./Style/pic/images.jpg"; // Ensure this path is correct
@@ -15,9 +15,10 @@ const Card = ({ recipe, showEdit }) => {
   const token = localStorage.getItem("token");
 
   const handleViewRecipe = async () => {
-    if ( recipe._id) {
+    if (recipe._id) {
       try {
-        await axios.post(`http://localhost:8000/recipe/view/${recipe._id}`, 
+        await axios.post(
+          `https://recipe-server-c7oz.onrender.com/recipe/view/${recipe._id}`,
           { email: emailId }, // Send user email instead of ID
           {
             headers: { Authorization: `Bearer ${token}` }, // Include token for authentication
@@ -28,13 +29,12 @@ const Card = ({ recipe, showEdit }) => {
       }
     }
 
-  // const handleViewRecipe = async () => {
-  //   try {
-  //     await axios.post(`http://localhost:8000/recipe/view/${recipe._id}`);
-  //   } catch (error) {
-  //     console.error("Error updating view count:", error);
-  //   }
-
+    // const handleViewRecipe = async () => {
+    //   try {
+    //     await axios.post(`http://localhost:8000/recipe/view/${recipe._id}`);
+    //   } catch (error) {
+    //     console.error("Error updating view count:", error);
+    //   }
 
     navigate(
       path === "/Search" ? `/recipe/${recipe._id}` : `/my-recipe/${recipe._id}`
@@ -47,7 +47,9 @@ const Card = ({ recipe, showEdit }) => {
     <div className="card shadow-sm mb-2">
       <img
         src={
-          recipe.imageUrl ? `http://localhost:8000${recipe.imageUrl}` : buger
+          recipe.imageUrl
+            ? `https://recipe-server-c7oz.onrender.com${recipe.imageUrl}`
+            : buger
         }
         className="card-img-top"
         alt={recipe.title || "Recipe Image"}

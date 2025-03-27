@@ -19,7 +19,7 @@ function RecipeView() {
 
   const fetchRecipe = async () => {
     try {
-      const response = await fetch(`http://localhost:8000/recipe/${id}`);
+      const response = await fetch(`https://recipe-server-c7oz.onrender.com/recipe/${id}`);
       const data = await response.json();
       setRecipe(data);
       setLoading(false);
@@ -41,7 +41,7 @@ function RecipeView() {
             <div className="card shadow-lg rounded-lg">
               {/*  Recipe Image at the Top */}
               <img
-                src={recipe.imageUrl ? `http://localhost:8000${recipe.imageUrl}` : buger}
+                src={recipe.imageUrl ? `https://recipe-server-c7oz.onrender.com${recipe.imageUrl}` : buger}
                 alt={recipe.title}
                 className="card-img-top croseee"
                 
