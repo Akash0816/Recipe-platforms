@@ -25,12 +25,15 @@ function Register() {
     }
 
     try {
-      const response = await axios.post("http://localhost:8000/signup", {
-        name,
-        email,
-        password,
-        confirmPassword,
-      });
+      const response = await axios.post(
+        "https://recipe-server-1-68ju.onrender.com/signup",
+        {
+          name,
+          email,
+          password,
+          confirmPassword,
+        }
+      );
 
       if (response.status === 200) {
         navigate("/login");

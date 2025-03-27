@@ -24,7 +24,7 @@ function RecipeEdit() {
   useEffect(() => {
     const fetchRecipe = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/recipe/${id}`);
+        const response = await axios.get(`https://recipe-server-1-68ju.onrender.com/recipe/${id}`);
         if (response.status === 200) {
           const data = response.data;
           setRecipe({

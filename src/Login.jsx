@@ -18,15 +18,18 @@ function Login() {
     }
 
     try {
-      const response = await axios.post("http://localhost:8000/loginapi", {
-        email,
-        password,
-      });
+      const response = await axios.post(
+        "https://recipe-server-1-68ju.onrender.com/loginapi",
+        {
+          email,
+          password,
+        }
+      );
 
       if (response.status === 200) {
         localStorage.setItem("token", response.data.token); // Store JWT
         localStorage.setItem("user-email", response.data.email); // Store email
-        
+
         navigate("/home");
       }
     } catch (err) {

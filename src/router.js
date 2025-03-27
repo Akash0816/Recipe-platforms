@@ -13,7 +13,7 @@ function RouterComponent() {
   return (
     <Router>
       <Routes>
-        <Route path="/Recipe-platforms" element={<App />} />{" "}
+        <Route path="/Recipe-platforms" element={<App />} />
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
         <Route path="/createrecipe" element={<Createrecipe />} />

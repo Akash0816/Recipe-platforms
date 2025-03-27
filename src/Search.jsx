@@ -10,7 +10,9 @@ function Search() {
   // Debounced search function to prevent excessive API calls
   const fetchRecipes = useCallback(async () => {
     try {
-      const response = await fetch(`http://localhost:8000/all?title=${searchQuery}`);
+      const response = await fetch(
+        `https://recipe-server-1-68ju.onrender.com/all?title=${searchQuery}`
+      );
       const data = await response.json();
       setRecipes(data);
     } catch (error) {

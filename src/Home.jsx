@@ -25,7 +25,7 @@ function Home() {
 
       try {
         // Fetch user profile
-        const profileResponse = await fetch("http://localhost:8000/profile", {
+        const profileResponse = await fetch("https://recipe-server-1-68ju.onrender.com/profile", {
           headers: { Authorization: `Bearer ${token}` },
         });
         const profileData = await profileResponse.json();

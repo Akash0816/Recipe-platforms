@@ -41,7 +41,7 @@ function Createrecipe() {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.post(
-        "http://localhost:8000/recipe/create",
+        "https://recipe-server-1-68ju.onrender.com/recipe/create",
         formData,
         {
           headers: {
