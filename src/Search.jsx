@@ -11,7 +11,7 @@ function Search() {
   const fetchRecipes = useCallback(async () => {
     try {
       const response = await fetch(
-        `https://recipe-server-1-68ju.onrender.com/all?title=${searchQuery}`
+        `https://recipe-server-c7oz.onrender.com/all?title=${searchQuery}`
       );
       const data = await response.json();
       setRecipes(data);

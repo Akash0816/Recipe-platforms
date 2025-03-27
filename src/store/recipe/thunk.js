@@ -9,7 +9,7 @@ export const getMyRecipe = (emailId) => {
   return async (dispatch) => {
     try {
       const response = await axios.get(
-        `https://recipe-server-1-68ju.onrender.com/my-recipes?email=${emailId}`
+        `https://recipe-server-c7oz.onrender.com/my-recipes?email=${emailId}`
       );
       if (response.status === 200) {
         console.log(response, "response");

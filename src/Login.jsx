@@ -19,7 +19,7 @@ function Login() {
 
     try {
       const response = await axios.post(
-        "https://recipe-server-1-68ju.onrender.com/loginapi",
+        "https://recipe-server-c7oz.onrender.com/loginapi",
         {
           email,
           password,
