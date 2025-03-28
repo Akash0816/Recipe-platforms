@@ -21,7 +21,7 @@ function Navbar() {
 
     setLoggedIn(false);
     setDropdownOpen(false); // Close dropdown after logout
-    navigate("/");
+    navigate("/Recipe-platforms");
   };
 
   const letter = localStorage.getItem("user-email");
