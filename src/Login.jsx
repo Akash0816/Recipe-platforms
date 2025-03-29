@@ -91,7 +91,7 @@ function Login() {
           </div>
         </form>
         <p className="pl-5 pb-2">
-          Not Registered Yet?<a href="/Register">Create Account</a>
+          Not Registered Yet?<a href="/register">Create Account</a>
         </p>
       </div>
     </div>
