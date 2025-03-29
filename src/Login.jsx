@@ -91,7 +91,10 @@ function Login() {
           </div>
         </form>
         <p className="pl-5 pb-2">
-          Not Registered Yet?<a href="/register">Create Account</a>
+          Not Registered Yet?
+          <NavLink to="/register" className="text-blue-500 underline">
+            Create Account
+          </NavLink>
         </p>
       </div>
     </div>
