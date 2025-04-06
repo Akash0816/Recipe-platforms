@@ -39,7 +39,7 @@ function Search() {
             type="text"
             id="Search"
             name="title"
-            className="ser"
+            className="ser123"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search for a recipe..."

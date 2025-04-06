@@ -37,65 +37,44 @@ function Login() {
     }
   };
   return (
-    <div className="background ">
-      <div className="Border">
-        <h2>Login</h2>
+    <div className="background d-flex justify-content-center align-items-center">
+      <div className="form-box p-4 shadow bg-white rounded">
+        <h2 className="text-center mb-4">Login</h2>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="email">Email:</label>
-          <br />
-          <div className="input-wrapper">
-            <span className="input-icon pt-3">
-              <i className="bi bi-envelope"></i>
-            </span>
+          <div className="form-group mb-3 position-relative">
+            <label htmlFor="email">Email</label>
+            <i className="bi bi-envelope position-absolute input-icon" />
+
             <input
               type="email"
-              name="email"
-              required
-              onChange={(e) => setEmail(e.target.value)}
-              className="password-input"
+              className="form-control ps-5 bucky"
               placeholder="Enter your email"
+              onChange={(e) => setEmail(e.target.value)}
+              required
             />
-            <br />
           </div>
-
-          <label htmlFor="password">Password:</label>
-          <br />
-          <div className="input-wrapper">
-            <span className="input-icon">
-              <i className="bi bi-lock"></i>
-            </span>
+          <div className="form-group mb-3 position-relative">
+            <label htmlFor="password">Password:</label>
+            <i className="bi bi-lock position-absolute input-icon" />
             <input
               type="password"
-              name="password"
-              required
-              onChange={(e) => setPassword(e.target.value)}
-              className="password-input"
+              className="form-control ps-5"
               placeholder="Enter your password"
+              onChange={(e) => setPassword(e.target.value)}
+              required
             />
-            <br />
-            <br />
           </div>
-          <div className="none">
-            {error && <div className="error">{error}</div>}
-            <NavLink to="/Home">
-              {" "}
-              <button
-                type="submit"
-                className="mb-4"
-                onClick={handleSubmit}
-                style={{ borderRadius: "20px" }}
-              >
-                Login
-              </button>
-            </NavLink>
-          </div>
+          {error && <div className="text-danger mb-3">{error}</div>}
+          <button
+            type="submit"
+            className="btn btn-success w-100 mb-3 rounded-pill"
+          >
+            Login
+          </button>
+          <p className="text-center">
+            Not Registered Yet? <NavLink to="/Register">Create Account</NavLink>
+          </p>
         </form>
-        <p className="pl-5 pb-2">
-          Not Registered Yet?
-          <NavLink to="/register" className="text-blue-500 underline">
-            Create Account
-          </NavLink>
-        </p>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import buger from "./Style/pic/images.jpg"; 
+import buger from "./Style/pic/images.jpg";
 
 const Card = ({ recipe, showEdit }) => {
   const navigate = useNavigate();

@@ -115,7 +115,7 @@ function RecipeEdit() {
       <div className="container mt-5">
         <h2 className="mb-4 text-center">Edit Recipe</h2>
         {error && <div className="alert alert-danger">{error}</div>}
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="mb-5">
           <div className="mb-3">
             <label className="form-label">Title:</label>
             <input

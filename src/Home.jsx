@@ -5,6 +5,7 @@ import Card from "./Card";
 import { useDispatch, useSelector } from "react-redux";
 import { getMyRecipe } from "./store/recipe/thunk";
 import { myRecipeCount, myRecipeList } from "./store/recipe/selector";
+import buger from "./Style/pic/images.jpg";
 
 function Home() {
   const [user, setUser] = useState(null);
@@ -58,23 +59,37 @@ function Home() {
       <Navbar />
 
       {/* Profile Section */}
-      <div className="row justify-content-center my-5 ">
-        <div className="col-md-6">
-          <div className="card text-center mt-5 shadow-sm">
-            <div className="card-body">
-              <img
-                src="https://via.placeholder.com/120"
-                alt="Profile"
-                className="rounded-circle mb-3"
-                width="120"
-                height="120"
-              />
-              <h3>{user?.name || "Loading..."}</h3>
-              <p className="text-muted">Total Recipes: {myRecipeCounts}</p>
-              <NavLink to={"/createrecipe"}>
-                {" "}
-                <button className="btn btn-primary btn-sm">Add Recipe</button>
-              </NavLink>
+      <div>
+        <Navbar />
+
+        {/* Profile Section */}
+        <div className="mt-4 pt-4">
+          <div className="container my-5">
+            <div className="row justify-content-center">
+              <div className="col-12 col-sm-10 col-md-8 col-lg-6">
+                <div className="card text-center border-0 shadow rounded-4">
+                  <div className="card-body p-4">
+                    <img
+                      src={buger}
+                      alt="Profile"
+                      className="rounded-circle shadow-sm mb-3"
+                      width="100"
+                      height="100"
+                    />
+                    <h4 className="fw-semibold mb-1">
+                      {user?.name || "Loading..."}
+                    </h4>
+                    <p className="text-muted mb-3">
+                      Total Recipes: {myRecipeCounts}
+                    </p>
+                    <NavLink to="/createrecipe">
+                      <button className="btn btn-outline-primary btn-sm px-4">
+                        Add Recipe
+                      </button>
+                    </NavLink>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

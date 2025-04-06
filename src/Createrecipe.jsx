@@ -62,7 +62,7 @@ function Createrecipe() {
   return (
     <div>
       <Navbar />
-      <div className="container mt-2">
+      <div className="container mt-5">
         <h2 className="mb-4 text-center">Create Recipe</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">

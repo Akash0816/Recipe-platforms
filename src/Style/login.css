@@ -5,22 +5,67 @@
   border-collapse: collapse;
   background-color: white;
 }
+
 h2 {
   text-align: center;
   padding-top: 40px;
 }
 
 form {
-  padding-left: 50px;
-  padding-top: 5px;
+  padding-left: 35px;
 }
 
 .background {
   background-image: url("./pic/back.jpg");
-  background-size: 100%;
-  height: 594px;
-  position: fixed;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
 }
+
+.form-box {
+  width: 100%;
+  max-width: 400px;
+  border-width: 1px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  top: 73%;
+  transform: translateY(-50%); /* Vertically center the icon */
+  pointer-events: none; /* Prevents the icon from blocking user input */
+  /* color: #6c757d; */
+}
+
+.form-control {
+  padding-left: 2.5rem !important;
+}
+
+@media (max-width: 576px) {
+  .form-box {
+    padding: 20px 15px;
+  }
+}
+
+input.form-control {
+  /* border: none; */
+  border-bottom: 2px solid #ccc;
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+input.form-control:focus {
+  border-bottom: 2px solid rgb(241, 249, 241);
+  /* box-shadow: none;
+  outline: none; */
+  
+}
+
 button {
   padding: 5px 55px;
   border-style: none;
@@ -30,30 +75,14 @@ button {
   cursor: pointer;
 }
 
-input {
-  border-width: 1px;
-  border-top: none;
-  width: 300px;
-  border-left: none;
-  border-right: none;
-}
-
 label {
-  padding-top: 8px;
+  padding-top: 4px;
 }
 
 .input-wrapper {
   position: relative;
   display: inline-block;
   width: 300px;
-}
-
-.input-icon {
-  position: absolute;
-  left: 8px;
-  top: 25%;
-  transform: translateY(-50%); /* Vertically center the icon */
-  pointer-events: none; /* Prevents the icon from blocking user input */
 }
 
 .password-input {
@@ -65,42 +94,17 @@ label {
   padding-left: 60px;
 }
 
-/* search */
-
-.cad {
- margin-top: 25px;
-}
-
-.ser
-  {
-    border-width: 1px;  
-    border-top: 1px;
-    width: 200px;
-    border-left: none;
-    border-right: none;
-  }
-
-  .mo1{
-    margin-top: 70px;
-  }
-
-
-
-
-
 /* Register page */
 
 .Border1 {
   border-style: none;
-  border-radius: 50px;
-  margin: 60px 450px;
+  border-radius: 60px;
+  /* margin: 60px 450px; */
   border-collapse: collapse;
   background-color: white;
 }
 
-
-
-.bi-lock{
+.bi-lock {
   padding-top: 5px;
 }
 
@@ -109,16 +113,44 @@ head {
   padding-top: 40px;
 }
 
-
-.fu{
+.fu {
   text-align: left;
 }
 
-.card-img-top{
-  max-height: 150px;
-  max-width: 320px;
-  margin: 1px 12px 0px 12px;
-  
+/* card */
 
+.card-img-top {
+  width: 100%;               /* Makes image span full width of container */
+  height: 150px;             /* Fixed height for consistency */
+  object-fit: cover;         /* Crops image nicely while keeping aspect ratio */
+  margin: 0;                 /* Remove margin to avoid layout issues on small screens */
+  border-radius: 0.2rem;     /* Optional: soften corners */
+  /* max-height: 150px;
+  max-width: 380px;
+  margin: 1px 12px 0px 12px; */
 }
 
+.card-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* search */
+
+.cad {
+  margin-top: 25px;
+}
+
+.ser {
+  border-width: 1px;
+  border-top: 1px;
+  width: 200px;
+  border-left: none;
+  border-right: none;
+}
+
+.mo1 {
+  margin-top: 70px;
+}

@@ -44,97 +44,69 @@ function Register() {
   };
 
   return (
-    <div class="background">
-      <div className="Border1">
-        <h2 className="head2">Register</h2>
+    <div className="background d-flex justify-content-center align-items-center">
+      <div className="form-box p-4 shadow bg-white  Border1">
+        <h2 className="text-center mb-4">Register</h2>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="email">Name:</label>
-          <br />
-          <div className="input-wrapper">
-            <span className="input-icon pt-3">
-              <i className="bi bi-person"></i>
-            </span>
+          <div className="form-group mb-2 position-relative">
+            <label htmlFor="email">Name:</label>
+            <i className="bi bi-person position-absolute input-icon" />
             <input
-              type="email"
-              name="email"
-              required
+              type="text"
+              className="form-control ps-5"
+              placeholder="Enter your name"
               onChange={(e) => setName(e.target.value)}
-              className="password-input"
-              placeholder="Enter your Name"
+              required
             />
-            <br />
           </div>
-
-          <label htmlFor="email">Email:</label>
-          <br />
-          <div className="input-wrapper">
-            <span className="input-icon pt-3">
-              <i className="bi bi-envelope"></i>
-            </span>
+          <div className="form-group mb-3 position-relative">
+            <label htmlFor="email">Email:</label>
+            <i className="bi bi-envelope position-absolute input-icon" />
             <input
               type="email"
-              name="email"
-              required
-              onChange={(e) => setEmail(e.target.value)}
-              className="password-input"
+              className="form-control ps-5"
               placeholder="Enter your email"
+              onChange={(e) => setEmail(e.target.value)}
+              required
             />
-            <br />
           </div>
 
-          <label htmlFor="password">Password:</label>
-          <br />
-          <div className="input-wrapper">
-            <span className="input-icon">
-              <i className="bi bi-lock mt-2"></i>
-            </span>
+          <div className="form-group mb-3 position-relative">
+            <label htmlFor="password">Password:</label>
+            <i className="bi bi-lock position-absolute input-icon" />
             <input
               type="password"
-              name="password"
-              required
-              onChange={(e) => setPassword(e.target.value)}
-              className="password-input"
+              className="form-control ps-5"
               placeholder="Enter your password"
+              onChange={(e) => setPassword(e.target.value)}
+              required
             />
-            <br />
           </div>
 
-          <label htmlFor="password">Conform Password:</label>
-          <br />
-          <div className="input-wrapper">
-            <span className="input-icon">
-              <i className="bi bi-lock"></i>
-            </span>
+          <div className="form-group mb-3 position-relative">
+            <label htmlFor="password">Conform Password:</label>
+            <i className="bi bi-lock position-absolute input-icon" />
             <input
               type="password"
-              name="conformpassword"
-              required
+              className="form-control ps-5"
+              placeholder="Confirm your password"
               onChange={(e) => setConfirmPassword(e.target.value)}
-              className="password-input"
-              placeholder="Enter your conform password"
+              required
             />
-            <br />
-            <br />
           </div>
-
-          <div className="none">
-            {error && <div className="error">{error}</div>}
-            <NavLink to="/Home">
-              {" "}
-              <button
-                type="submit"
-                className="mb-5"
-                onClick={handleSubmit}
-                style={{ borderRadius: "20px" }}
-              >
-                Register
-              </button>
-            </NavLink>
-          </div>
+          {error && <div className="text-danger mb-3">{error}</div>}
+          <button
+            type="submit"
+            className="btn btn-success w-100 mb-3 rounded-pill"
+          >
+            Register
+          </button>
+          <p className="text-center">
+            Already have an account? <NavLink to="/login">Login</NavLink>
+          </p>
         </form>
       </div>
     </div>
   );
 }
-
 export default Register;

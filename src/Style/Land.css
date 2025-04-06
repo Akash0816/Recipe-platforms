@@ -6,10 +6,15 @@
 .croseee{
   max-height: 200px;
   max-width: 500px;
-  margin-left: 20px;
+  margin-left: 25px;
+  margin-right: 25px;
   object-fit: cover;
-  margin-bottom: -30px;
+  margin-bottom: -45px;
+  margin: 0 auto;
+  margin-top: 10px;
+  display: block;
 }
+
 
 
 
