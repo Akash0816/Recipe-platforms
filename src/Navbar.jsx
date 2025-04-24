@@ -30,7 +30,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
       <div className="container-fluid">
-        <NavLink to={"/createrecipe"} className="navbar-brand logo">
+        <NavLink to={""} className="navbar-brand logo">
           🍽️ Foodie
         </NavLink>
 
